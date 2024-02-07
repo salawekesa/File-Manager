@@ -1,0 +1,10 @@
+{%  for file in files %}
+
+    <P>{{ file.sender }}</P>
+    <P>{{ file.recipient }}</P>
+    <P>{{ file.subject }}</P>
+    <P>{{ file.classification }}</P>
+    <P>{{ file.folder }}</P>
+    <P>{{ file.created_at }}</P>
+
+{% endfor %}
