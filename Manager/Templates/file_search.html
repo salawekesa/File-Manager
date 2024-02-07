@@ -1,0 +1,17 @@
+
+    <h1>File Search</h1>
+    <form action="{% url 'file_search' %}" method="get">
+        <input type="text" name="q" value="{{ query }}" placeholder="Search">
+        <button type="submit">Search</button>
+    </form>
+    {% if results %}
+        <h2>Search Results for "{{ query }}"</h2>
+        <ul>
+            {% for file in results %}
+                <li>{{ file.sender }} - {{ file.subject }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+
