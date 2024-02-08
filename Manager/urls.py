@@ -1,7 +1,10 @@
 from django.urls import path
-from .views import listing_files, file_search
+from . import views
+from .views import Authpage
+
 
 urlpatterns = [
-    path("",  listing_files),
-    path("files/", file_search)
+    path("", views.home, name="home"),
+    path("list",  views.listing_files, name="listfiles"),
+    path("files", views.file_search, name="filesearch"),
 ]

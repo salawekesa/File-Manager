@@ -23,3 +23,12 @@ def file_search(request):
             Q(signatory__icontains=query)
         )
     return render(request, 'file_search.html', {'results': results, 'query': query})
+
+
+def home(request):
+
+    return render(request, 'home.html')
+
+
+def Authpage(request):
+    return render(request, "Authpage.html")
